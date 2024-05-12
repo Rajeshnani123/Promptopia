@@ -8,7 +8,7 @@ interface RequestType {
 }
 
 export const GET = async (
-  _request: RequestType,
+  _request: any,
   { params }: { params: { id: string } }
 ) => {
   try {
@@ -22,7 +22,7 @@ export const GET = async (
 };
 
 export const PATCH = async (
-  _request: RequestType,
+  _request: any,
   { params }: { params: { id: string } }
 ) => {
   const { prompt, tag } = await _request.json();
@@ -41,7 +41,7 @@ export const PATCH = async (
 };
 
 export const DELETE = async (
-  _request: RequestType,
+  _request: any,
   { params }: { params: { id: string } }
 ) => {
   try {
