@@ -1,12 +1,6 @@
 import { connectToDB } from "@utils/database";
 import Prompt from "@models/prompt";
 
-interface RequestType {
-  json():
-    | { prompt: string; tag: string }
-    | PromiseLike<{ prompt: string; tag: string }>;
-}
-
 export const GET = async (
   _request: any,
   { params }: { params: { id: string } }
